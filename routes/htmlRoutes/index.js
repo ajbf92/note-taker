@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 // route that connects notes page with server
-router.get("/animals", (req, res) => {
+router.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "../.././public/notes.html"));
 });
 
