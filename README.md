@@ -19,13 +19,13 @@ https://quiet-reef-79319.herokuapp.com/
 ## Usage
 
 Home Page
-![ScreenShot](images/.png)
+![ScreenShot](images/home.png)
 
 To add a note fill in the title, the text and then click on the save icon at the top right: 
-![ScreenShot](images/.png)
+![ScreenShot](images/addingNote.png)
 
 Saved notes will be found on the panel on the left:
-![ScreenShot](images/.png)
+![ScreenShot](images/savedNotes.png)
 
 You can delete a note by clicking on the red trash can icon:
 ![ScreenShot](images/.png)
