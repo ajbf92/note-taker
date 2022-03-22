@@ -1,6 +1,4 @@
 const express = require('express');
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
 
 // When Heroku runs our app, it sets an environment variable called process.env.PORT. We're going to tell
 // our app to use that port, if it has been set, and if not, default to port 80.
@@ -25,12 +23,12 @@ app.use(express.json());
 // now be accessed without having a specific server endpoint created for it!
 app.use(express.static('public'));
 
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+app.use(require("./routes"));
 // This is our way of telling the server that any time a client navigates to <ourhost>/api, the app will
 // use the router we set up in apiRoutes. If / is the endpoint, then the router will serve back our HTML
 // routes.
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
+    console.log(`API server now on port ${PORT}`);
+    console.log(`🌍 See App on localhost:${PORT}`);
 });

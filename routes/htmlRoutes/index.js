@@ -17,7 +17,7 @@ router.get("/notes", (req, res) => {
 
 // wildcard route; and it should always come last
 router.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/index.html"));
+  res.sendFile(path.join(__dirname, "../.././public/index.html"));
 });
 
 module.exports = router;
