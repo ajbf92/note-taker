@@ -89,7 +89,8 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  deleteNote(noteId)
+  .then(() => {
     console.log("hi");
     getAndRenderNotes();
     renderActiveNote();
@@ -182,3 +183,4 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
