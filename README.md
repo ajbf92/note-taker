@@ -27,8 +27,7 @@ To add a note fill in the title, the text and then click on the save icon at the
 Saved notes will be found on the panel on the left:
 ![ScreenShot](images/savedNotes.png)
 
-You can delete a note by clicking on the red trash can icon:
-![ScreenShot](images/.png)
+You can delete a note by clicking on the red trash can icon and then refreshing the page (still working on rerendering list items)
   
 ## Contributions
 
