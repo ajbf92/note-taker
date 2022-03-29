@@ -25,7 +25,7 @@ router.post("/notes", (req, res) => {
 
     const newNote = req.body;
     newNote.id = uuid.v4();
-    console.log(newNote.id)
+    // console.log(newNote.id)
     notes.push(newNote);
 
     return  writeFileAsync(
@@ -40,14 +40,14 @@ router.post("/notes", (req, res) => {
 //deletes notes from db.json when user clicks on trash icon
 router.delete("/notes/:id", function(req, res) {
   const idToDelete = req.params.id;
-  console.log(idToDelete + " = idToDelete");
+  // console.log(idToDelete + " = idToDelete");
   readFileAsync("./data/db.json", "utf8")
   .then(function(data){
-    console.log("we are in delete");
+    // console.log("we are in delete");
     const notes = JSON.parse(data);
     return notes.filter(note=>note.id != idToDelete);
   }).then(function(notes){
-    console.log(notes)
+    // console.log(notes)
     writeFileAsync("./data/db.json", JSON.stringify(notes)).then(()=> {
       res.json(notes);
     })
